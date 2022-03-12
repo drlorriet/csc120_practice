@@ -23,6 +23,7 @@ jobs:
           pip install runestone
       - name: Build project
         run: |
+          mv ./mysources/* ./myassignments/myassignments/_sources/
           cd ./myassignments
           runestone build
           python -c "import sys; print('All done')"
