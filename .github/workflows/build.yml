@@ -1,4 +1,4 @@
-name: Python package
+name: Python build
 
 on:
   workflow_dispatch:
@@ -9,18 +9,12 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        os: [ ubuntu-latest ]
-        python-version: [ "3.8", "3.9" ]
-        node-version: [10.x, 12.x, 14.x, 15.x]
-
     steps:
-      - uses: actions/checkout@v2 ${{ matrix.python-version }}
+      - uses: actions/checkout@v2
       - name:  Set up python 
         uses: actions/setup-python@v2
         with:
-          python-version: ${{ matrix.python-version }}
+          python-version:  '3.9'
       - name: Display Python version
         run: python -c "import sys; print({sys.version})"
       - name: Install dependencies
