@@ -13,7 +13,7 @@ This Is A New Project
 .. Sources can also be included from subfolders of this directory.
    (e.g. "DataStructures/queues.rst").
 
-SECTION 0: Lorrie
+SECTION 1: Arrays 
 :::::::::::::::::::::::
 
 .. include:: prob1.rst
